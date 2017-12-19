@@ -52,9 +52,9 @@
 						alert("A user disconnected from " + conn.remoteAddr);
 					},
 					// Other options
-					'origins' : [ 'file://' ], // validates the 'Origin' HTTP Header.
-					'protocols' : [ 'my-protocol-v1', 'my-protocol-v2' ], // validates the 'Sec-WebSocket-Protocol' HTTP Header.
-					'tcpNoDelay' : true // disables Nagle's algorithm.
+					// 'origins' : [ 'file://' ], // validates the 'Origin' HTTP Header.
+					// 'protocols' : [ 'my-protocol-v1', 'my-protocol-v2' ], // validates the 'Sec-WebSocket-Protocol' HTTP Header.
+					// 'tcpNoDelay' : true // disables Nagle's algorithm.
 				}, function onStart(addr, port) {
 					console.log('Listening on %s:%d', addr, port);
 					alert("Listening on " + addr + ":" + port);
