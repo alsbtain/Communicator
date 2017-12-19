@@ -26,7 +26,7 @@
 			function onDeviceReady() {
 				alert("Hi");
 				var wsserver = cordova.plugins.wsserver;
-				wsserver.start(port, {
+				wsserver.start(0, {
 					// WebSocket Server handlers
 					'onFailure' :  function(addr, port, reason) {
 						alert('Stopped listening on %s:%d. Reason: %s', addr, port, reason);
