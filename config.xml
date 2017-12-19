@@ -22,4 +22,5 @@
 	<plugin spec="https://github.com/becvert/cordova-plugin-websocket-server.git" />
 	<plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
 </widget>
