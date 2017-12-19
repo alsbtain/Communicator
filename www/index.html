@@ -24,7 +24,6 @@
         <script type="text/javascript" src="cordova.js"></script>
 		<script>
 			function onDeviceReady() {
-			alert("Hi");
 				var wsserver = cordova.plugins.wsserver;
 				wsserver.start(port, {
 					// WebSocket Server handlers
@@ -58,6 +57,8 @@
 					alert('Did not start. Reason: %s', reason);
 				});
 			}
+			
+			document.addEventListener("deviceready", onDeviceReady, false);
 		</script>
     </body>
 </html>
