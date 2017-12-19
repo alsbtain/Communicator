@@ -30,7 +30,6 @@
 					'onFailure' :  function(addr, port, reason) {
 						console.log('Stopped listening on %s:%d. Reason: %s', addr, port, reason);
 						alert("Stopped listening on " + addr + ":" + port + ". Reason: " + reason);
-						console.log('Stopped listening on %s:%d. Reason: %s', addr, port, reason);
 					},
 					// WebSocket Connection handlers
 					'onOpen' : function(conn) {
@@ -59,6 +58,9 @@
 				}, function onStart(addr, port) {
 					console.log('Listening on %s:%d', addr, port);
 					alert("Listening on " + addr + ":" + port);
+					alert(addr);
+					alert(port);
+					console.log('Listening on %s:%d', addr, port);
 				}, function onDidNotStart(reason) {
 					console.log('Did not start. Reason: %s', reason);
 					alert("Did not start. Reason: " + reason);
