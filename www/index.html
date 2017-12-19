@@ -24,6 +24,7 @@
         <script type="text/javascript" src="cordova.js"></script>
 		<script>
 			function onDeviceReady() {
+				alert("Hi");
 				var wsserver = cordova.plugins.wsserver;
 				wsserver.start(port, {
 					// WebSocket Server handlers
