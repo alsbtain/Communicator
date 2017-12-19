@@ -18,6 +18,7 @@
         <icon density="xxhdpi" src="www/res/icon/android/144.png" />
         <icon density="xxxhdpi" src="www/res/icon/android/192.png" />
     </platform>
+	<plugin name="cordova-plugin-network-information" />
 	<plugin spec="https://github.com/becvert/cordova-plugin-websocket-server.git" />
 	<plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />

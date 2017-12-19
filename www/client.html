@@ -1,0 +1,20 @@
+<title>websocket</title> 
+
+<script> var socket = new WebSocket('ws://10.249.52.116:48459'); 
+		// Socket 
+		socket.onopen = function(event) { 
+			console.log(event); 
+			socket.send('I am the client and I\'m listening!'); 
+
+			socket.onmessage = function(event) { 
+				console.log('Client received a message',event); 
+			}; 
+
+			socket.onclose = function(event) { 
+				console.log('Client notified socket has closed',event); 
+			}; 
+		};
+
+
+	</script>
+</body>
