@@ -24,6 +24,7 @@
         <script type="text/javascript" src="cordova.js"></script>
 		<script>
 			function onDeviceReady() {
+				networkinterface.getCarrierIPAddress(function (ip) { localIP = ip; });
 				var wsserver = cordova.plugins.wsserver;
 				wsserver.start(0, {
 					// WebSocket Server handlers
@@ -57,7 +58,8 @@
 					// 'tcpNoDelay' : true // disables Nagle's algorithm.
 				}, function onStart(addr, port) {
 					console.log('Listening on %s:%d', addr, port);
-					alert("Listening on " + networkinterface.getCarrierIPAddress(function (ip) { return ip; }) + ":" + port);
+					alert("Listening on " + localIP + ":" + port);
+					
 				}, function onDidNotStart(reason) {
 					console.log('Did not start. Reason: %s', reason);
 					alert("Did not start. Reason: " + reason);
