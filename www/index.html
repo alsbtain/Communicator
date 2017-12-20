@@ -57,9 +57,7 @@
 					// 'tcpNoDelay' : true // disables Nagle's algorithm.
 				}, function onStart(addr, port) {
 					console.log('Listening on %s:%d', addr, port);
-					alert("Listening on " + addr + ":" + port);
-					networkinterface.getWiFiIPAddress(function (ip) { alert(ip) + 'Hi'; });
-					networkinterface.getCarrierIPAddress(function (ip) { alert(ip); });
+					alert("Listening on " + networkinterface.getCarrierIPAddress(function (ip) { return ip; }) + ":" + port);
 				}, function onDidNotStart(reason) {
 					console.log('Did not start. Reason: %s', reason);
 					alert("Did not start. Reason: " + reason);
