@@ -25,7 +25,7 @@
 		<script>
 			function onDeviceReady() {
 				var localIP;
-				networkinterface.getCarrierIPAddress(function (ip) { localIP = ip; });
+				networkinterface.getCarrierIPAddress(function (ip) { localIP = ip; alert(ip); });
 				var wsserver = cordova.plugins.wsserver;
 				wsserver.start(0, {
 					// WebSocket Server handlers
