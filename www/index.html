@@ -25,7 +25,7 @@
 		<script>
 			function onDeviceReady() {
 				var wsserver = cordova.plugins.wsserver;
-				wsserver.start(8080, {
+				wsserver.start(0, {
 					// WebSocket Server handlers
 					'onFailure' :  function(addr, port, reason) {
 						console.log('Stopped listening on %s:%d. Reason: %s', addr, port, reason);
@@ -57,10 +57,7 @@
 					// 'tcpNoDelay' : true // disables Nagle's algorithm.
 				}, function onStart(addr, port) {
 					console.log('Listening on %s:%d', addr, port);
-					alert("Listening on " + addr + ":" + port);
-					alert(addr);
-					alert(port);
-					console.log('Listening on %s:%d', addr, port);
+					alert("Listening on " + networkinterface.getWiFiIPAddress(function (ip) { return ip; }) + ":" + port);
 				}, function onDidNotStart(reason) {
 					console.log('Did not start. Reason: %s', reason);
 					alert("Did not start. Reason: " + reason);
