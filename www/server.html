@@ -54,7 +54,7 @@
 						arrayUUID.push(conn.uuid);
 					},
 					'onMessage' : function(conn, msg) {
-						alert(conn.remoteAddr + ':' + msg);
+						alert(conn.remoteAddr + ': ' + msg);
 					},
 					'onClose' : function(conn, code, reason, wasClean) {
 						alert("A user disconnected from " + conn.remoteAddr);
