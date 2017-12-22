@@ -31,7 +31,9 @@
 			
 			function onDeviceReady() {
 
+				alert('onDeviceReady!');
 				networkinterface.getWiFiIPAddress(function (ip) { localIP = ip; }, function(err) { localIP = err; });
+				alert(localIP);
 				
 				arrayUUID = [];
 
