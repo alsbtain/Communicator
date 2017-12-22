@@ -7,7 +7,6 @@
     <author email="info@alsbtain.net" href="http://alsbtain.net">
         Alsbtain Development Team
     </author>
-	<preference name="phonegap-version" value="cli-6.0.0" />
     <content src="index.html" />
     <access origin="*" />
     <icon src="icon.png" />
