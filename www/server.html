@@ -32,8 +32,8 @@
 			function onDeviceReady() {
 
 				alert('onDeviceReady!');
-				/* networkinterface.getWiFiIPAddress(function (ip) { localIP = ip; }, function(err) { localIP = err; });
-				alert(localIP); */
+				networkinterface.getWiFiIPAddress(function (ip) { localIP = ip; }, function(err) { localIP = err; });
+				alert(localIP);
 				
 				arrayUUID = [];
 
@@ -63,7 +63,7 @@
 						arrayUUID = arrayUUID.filter(a => a !== conn.uuid);
 					},
 				}, function onStart(addr, port) {
-					alert("Listening on " + addr + ":" + port);
+					alert("Listening on " + localIP + ":" + port);
 					
 				}, function onDidNotStart(reason) {
 					alert("Did not start. Reason: " + reason);
