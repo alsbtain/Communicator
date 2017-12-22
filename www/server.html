@@ -24,7 +24,7 @@
 		<script>
 			function sSend(){
 				arrayUUID.forEach(function(element) {
-					wsserver.send(element, document.getElementById('msg').value)
+					wsserver.send({'uuid':element}, document.getElementById('msg').value)
 				});
 				return false;
 			}
